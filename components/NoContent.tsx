@@ -1,5 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
+import CoreImage from './core/CoreImage'
 
 export enum NoContentType {
   DEFAULT = 'DEFAULT',
@@ -19,7 +20,7 @@ const NoContent: React.FC<INoContentProps> = props => {
     <div className={classnames('p-5 flex flex-col items-center justify-center', className)}>
       {/* <div className="w-20 h-20 bg-gray300 mb-4"></div> */}
       <div>
-        <img src={'/images/empty/empty-cart-basket.webp'} className="w-80" alt="No content found" />
+        <CoreImage url={'/images/empty/empty-cart-basket.webp'} className="w-80" alt="No content found" />
       </div>
       <div className="text-center">{message}</div>
     </div>
