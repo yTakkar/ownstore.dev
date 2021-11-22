@@ -1,6 +1,7 @@
 import React from 'react'
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
 import MetaTags from '../scriptTemplates/meta'
+import { AnalyticsScripts } from '../scriptTemplates/analytics'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -12,6 +13,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <AnalyticsScripts />
           <MetaTags />
         </Head>
         <body>
