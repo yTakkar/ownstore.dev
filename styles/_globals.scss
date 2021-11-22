@@ -1,0 +1,68 @@
+// globals
+a {
+  @apply text-primaryText transition-all;
+
+  &:hover {
+    @apply text-primaryTextBold;
+  }
+}
+
+body {
+  @apply text-primaryText font-primary;
+  -webkit-tap-highlight-color: transparent; /* for removing the highlight */
+}
+
+div:focus {
+  outline: none !important;
+}
+
+ul {
+  @apply list-disc;
+}
+
+.fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+.fade-out {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-hover-bg {
+  &:hover {
+    background: inherit !important;
+  }
+}
+
+.mobile-view {
+  display: inherit;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.desktop-view {
+  display: none;
+
+  @include desktop {
+    display: inherit;
+  }
+}
+
+.underline-dashed {
+  text-decoration: underline dashed;
+}
+
