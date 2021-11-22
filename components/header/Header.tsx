@@ -17,7 +17,7 @@ const Header: React.FC<IHeaderProps> = props => {
               <CoreLink url={getHomePageUrl()} className="mr-4">
                 <CoreImage url={APP_LOGO.DEFAULT} alt="App Logo" className="h-12" />
               </CoreLink>
-              <CoreLink url={getHomePageUrl()} className="font-medium font-primary-medium text-primaryTextBold">
+              <CoreLink url={getHomePageUrl()} className="font-medium font-primary-medium text-primaryTextBold text-lg">
                 {appConfig.global.app.name}
               </CoreLink>
             </div>

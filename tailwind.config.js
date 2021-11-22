@@ -22,8 +22,8 @@ const tailwindConfig = {
 
       white: '#FFFFFF',
 
-      primary: '#ce2e35', // primary
-      lightprimary: 'rgba(206, 46, 53, 0.9)', // primary light
+      primary: '#1e1e1e', // primary
+      lightprimary: 'rgba(30, 30, 30, 0.9)', // primary light
       primaryText: '#717171', // primary text color
       primaryTextBold: '#1e1e1e', // primary bold text color
 
