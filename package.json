@@ -6,8 +6,7 @@
     "dev": "next dev -p 3004",
     "start:local": "YOUR_STORE_LANDING_WEB_ENV=local npm run dev",
     "start": "next start",
-    "build:init": "next build",
-    "build": "build:init",
+    "build": "next build",
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
     "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix"
   },
