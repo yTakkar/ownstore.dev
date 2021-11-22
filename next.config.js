@@ -5,7 +5,7 @@ const { getAbsPath } = require('./scripts/fileSystem')
 const appEnv = process.env.YOUR_STORE_LANDING_WEB_ENV
 
 if (!appEnv) {
-  console.error('YOUR_STORE_LANDING_WEB_ENV env variable is not set', process.env.HSCI_YOUR_STORE_LANDING_WEB_ENV)
+  console.error('YOUR_STORE_LANDING_WEB_ENV env variable is not set', process.env.YOUR_STORE_LANDING_WEB_ENV)
   process.exit(1)
 }
 

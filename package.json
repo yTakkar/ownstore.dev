@@ -3,12 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev:init": "next dev -p 3004",
-    "dev": "run-s dev:init",
+    "dev": "next dev -p 3004",
     "start:local": "YOUR_STORE_LANDING_WEB_ENV=local npm run dev",
     "start": "next start",
     "build:init": "next build",
-    "build": "run-s build:init",
+    "build": "build:init",
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
     "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix"
   },

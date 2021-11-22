@@ -1,5 +1,5 @@
 const appConfig = {
-  isDev: process.env.YOUR_STORE_LANDING_WEB_ENV.includes('local'),
+  isDev: process.env.YOUR_STORE_LANDING_WEB_ENV?.includes('local'),
   env: process.env.YOUR_STORE_LANDING_WEB_ENV,
   global: {
     app: {
