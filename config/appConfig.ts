@@ -13,6 +13,10 @@ const appConfig = {
       enabled: process.env.YOUR_STORE_LANDING_WEB_INTEGRATION_GOOGLE_ANALYTICS_ENABLED === 'true',
       code: process.env.YOUR_STORE_LANDING_WEB_INTEGRATION_GOOGLE_ANALYTICS_CODE,
     },
+    hotjar: {
+      enabled: process.env.YOUR_STORE_LANDING_WEB_INTEGRATION_HOTJAR_ANALYTICS_ENABLED === 'true',
+      code: process.env.YOUR_STORE_LANDING_WEB_INTEGRATION_HOTJAR_ANALYTICS_CODE,
+    },
   },
 }
 
