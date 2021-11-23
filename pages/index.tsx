@@ -143,8 +143,8 @@ const Home: NextPage<IProps> = props => {
           <span className="text-primaryTextBold">What is {appConfig.global.app.name}?</span>{' '}
           <span>
             An end-to-end e-commerce solution that can be configured according to your business needs. To simply put,
-            you will receive a complete configurable system (set of projects) to setup your own online store. And yes,
-            lifetime support too :)
+            you will receive a completely configurable system (set of projects) to set up your own online store. And
+            yes, lifetime support too :)
           </span>
         </div>
         <div className="flex items-center justify-center lg:justify-start mt-4">
@@ -229,7 +229,7 @@ const Home: NextPage<IProps> = props => {
             size={CoreButtonSize.LARGE}
             type={CoreButtonType.SOLID_PRIMARY}
             className="mr-1"
-            url={`mailto:yourrstoreonline@gmail.com?subject=${appConfig.order.mail.subject}&body=${appConfig.order.mail.body}`}
+            url={`mailto:yourrstoreonline@gmail.com?subject=${appConfig.order.mail.subject}`}
             icon={MailOpenIcon}
           />
         </div>

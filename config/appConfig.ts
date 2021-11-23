@@ -18,16 +18,15 @@ const appConfig = {
     },
     mail: {
       subject: `Interested for ${name}.`,
-      body: '',
     },
   },
   company: {
     socialLinks: [
-      { type: 'TWITTER', url: 'https://twitter.com/yourrStore', name: 'Twitter', isExternal: true },
-      { type: 'FACEBOOK', url: 'https://www.facebook.com/yourStoreFbPage', name: 'Facebook', isExternal: true },
-      { type: 'INSTAGRAM', url: 'https://www.instagram.com/youurstore_', name: 'Instagram', isExternal: true },
+      { type: 'TWITTER', url: 'https://twitter.com/ownStore_', name: 'Twitter', isExternal: true },
+      { type: 'FACEBOOK', url: 'https://www.facebook.com/ownStoreFB', name: 'Facebook', isExternal: true },
+      { type: 'INSTAGRAM', url: 'https://www.instagram.com/ownStore__/', name: 'Instagram', isExternal: true },
       { type: 'WHATSAPP', url: 'https://wa.me/+918104570640', name: 'WhatsApp', isExternal: true },
-      { type: 'MAIL', url: 'mailto:yourrstoreonline@gmail.com', name: 'Mail', isExternal: true },
+      { type: 'MAIL', url: 'mailto:ownstoreonlinee@gmail.com', name: 'Mail', isExternal: true },
     ],
   },
   footer: {
