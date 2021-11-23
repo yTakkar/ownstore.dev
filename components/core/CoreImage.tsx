@@ -1,12 +1,6 @@
 import React, { CSSProperties, useRef, useState, useEffect } from 'react'
 import classnames from 'classnames'
 
-export enum ImageSourceType {
-  ASSET = 'asset', // assets stored locally such as logo, icons, etc..
-  CLOUD = 'cloud', // stored in cloud
-  NONE = 'none', // for absolute urls
-}
-
 export interface ICoreImageProps {
   url: string
   alt: string

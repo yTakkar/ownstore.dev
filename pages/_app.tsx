@@ -6,6 +6,7 @@ import PageContainer from '../components/PageContainer'
 import classNames from 'classnames'
 import AppSeo, { IAppSeoProps } from '../components/seo/AppSeo'
 import Header from '../components/header/Header'
+import Footer from '../components/footer/Footer'
 
 declare let window: any
 
@@ -39,6 +40,7 @@ const MyApp: NextPage<IProps> = props => {
           <Component {...pageProps} key={router.route} />
         </PageContainer>
       </main>
+      <Footer />
     </div>
   )
 }
