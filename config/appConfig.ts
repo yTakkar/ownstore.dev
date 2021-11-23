@@ -1,15 +1,16 @@
 const name = 'OwnStore'
 
 const appConfig = {
-  isDev: process.env.YOUR_STORE_LANDING_WEB_ENV?.includes('local'),
-  env: process.env.YOUR_STORE_LANDING_WEB_ENV,
+  isDev: process.env.OWN_STORE_WEB_ENV?.includes('local'),
+  env: process.env.OWN_STORE_WEB_ENV,
   global: {
     app: {
       name: name,
+      emailAddress: 'ownstoreonlinee@gmail.com',
     },
-    domain: process.env.YOUR_STORE_LANDING_WEB_DOMAIN,
-    baseUrl: process.env.YOUR_STORE_LANDING_WEB_BASE_URL,
-    demoWebsiteUrl: process.env.YOUR_STORE_LANDING_WEB_DEMO_WEBSITE_URL,
+    domain: process.env.OWN_STORE_WEB_DOMAIN,
+    baseUrl: process.env.OWN_STORE_WEB_BASE_URL,
+    demoWebsiteUrl: process.env.OWN_STORE_WEB_DEMO_WEBSITE_URL,
   },
   order: {
     priceInUSD: {
@@ -34,12 +35,12 @@ const appConfig = {
   },
   integrations: {
     googleAnalytics: {
-      enabled: process.env.YOUR_STORE_LANDING_WEB_INTEGRATION_GOOGLE_ANALYTICS_ENABLED === 'true',
-      code: process.env.YOUR_STORE_LANDING_WEB_INTEGRATION_GOOGLE_ANALYTICS_CODE,
+      enabled: process.env.OWN_STORE_WEB_INTEGRATION_GOOGLE_ANALYTICS_ENABLED === 'true',
+      code: process.env.OWN_STORE_WEB_INTEGRATION_GOOGLE_ANALYTICS_CODE,
     },
     hotjar: {
-      enabled: process.env.YOUR_STORE_LANDING_WEB_INTEGRATION_HOTJAR_ANALYTICS_ENABLED === 'true',
-      code: process.env.YOUR_STORE_LANDING_WEB_INTEGRATION_HOTJAR_ANALYTICS_CODE,
+      enabled: process.env.OWN_STORE_WEB_INTEGRATION_HOTJAR_ANALYTICS_ENABLED === 'true',
+      code: process.env.OWN_STORE_WEB_INTEGRATION_HOTJAR_ANALYTICS_CODE,
     },
   },
 }

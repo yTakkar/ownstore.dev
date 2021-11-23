@@ -36,7 +36,6 @@ const HotjarAnalyticsScript = () => {
 
   return (
     <>
-      {/* Hotjar Tracking Code for https://your-store-landing-website.vercel.app */}
       <script
         type="text/javascript"
         dangerouslySetInnerHTML={{

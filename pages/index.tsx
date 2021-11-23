@@ -229,7 +229,7 @@ const Home: NextPage<IProps> = props => {
             size={CoreButtonSize.LARGE}
             type={CoreButtonType.SOLID_PRIMARY}
             className="mr-1"
-            url={`mailto:yourrstoreonline@gmail.com?subject=${appConfig.order.mail.subject}`}
+            url={`mailto:${appConfig.global.app.emailAddress}?subject=${appConfig.order.mail.subject}`}
             icon={MailOpenIcon}
           />
         </div>
