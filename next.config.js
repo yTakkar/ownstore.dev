@@ -1,12 +1,17 @@
 /** @type {import('next').NextConfig} */
 
-const { getAbsPath } = require('./scripts/fileSystem')
+const path = require('path')
 
 const appEnv = process.env.YOUR_STORE_LANDING_WEB_ENV
 
 if (!appEnv) {
   console.error('YOUR_STORE_LANDING_WEB_ENV env variable is not set', process.env.YOUR_STORE_LANDING_WEB_ENV)
   process.exit(1)
+}
+
+const getAbsPath = dirPath => {
+  const extendedPath = typeof dirPath === 'string' ? [dirPath] : dirPath
+  return path.resolve(process.cwd(), ...extendedPath)
 }
 
 const { parsed: parsedEnvs } = require('dotenv').config({
