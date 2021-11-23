@@ -21,6 +21,14 @@ const appConfig = {
       subject: `Interested for ${name}.`,
     },
   },
+  seo: {
+    facebook: {
+      pageId: process.env.OWN_STORE_WEB_SEO_FACEBOOK_PAGE_ID,
+    },
+    twitter: {
+      username: process.env.OWN_STORE_WEB_SEO_TWITTER_USERNAME,
+    },
+  },
   company: {
     socialLinks: [
       { type: 'TWITTER', url: 'https://twitter.com/ownStore_', name: 'Twitter', isExternal: true },

@@ -16,7 +16,6 @@ export interface IAppSeoProps {
   noIndex?: boolean
   noFollow?: boolean
   imageUrl?: string
-  structuredData?: {}
 }
 
 const AppSeo: React.FC<IAppSeoProps> = props => {
@@ -61,10 +60,19 @@ const AppSeo: React.FC<IAppSeoProps> = props => {
       {/* OpenGraph */}
       <meta property="og:site_name" content={appConfig.global.app.name} />
       <meta property="og:type" key="og:type" content="website" />
+      <meta key="og:title" property="og:title" content={title} />
+      <meta key="og:description" property="og:description" content={description} />
       <meta key="og:image" property="og:image" content={imageUrl} />
       <meta key="og:url" property="og:url" content={canonical} />
 
+      {/* Facebook */}
+      <meta property="fb:pages" content={appConfig.seo.facebook.pageId} />
+
       {/* Twitter */}
+      <meta name="twitter:site" content={appConfig.seo.twitter.username} />
+      <meta key="twitter:card" name="twitter:card" content={'summary'} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl}></meta>
 
       {/* Structured data */}
