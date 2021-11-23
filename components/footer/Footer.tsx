@@ -17,7 +17,7 @@ const Footer: React.FC<IFooterProps> = props => {
           <div className="lg:flex justify-between items-start">
             <div className="flex flex-col">
               <div>
-                <div className="text-mineShaft font-medium font-primary-medium mb-2">{appConfig.global.app.name}</div>
+                <div className="text-mineShaft font-medium font-primary-medium mb-1">{appConfig.global.app.name}</div>
                 <div className="text-sm">
                   <EscapeHTML html={appConfig.footer.copyrightText} element="span" />
                 </div>

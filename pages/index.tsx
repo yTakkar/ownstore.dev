@@ -5,8 +5,8 @@ import { prepareHomePageSeo } from '../utils/seo/home'
 import CoreImage from '../components/core/CoreImage'
 import appConfig from '../config/appConfig'
 import CoreButton, { CoreButtonSize, CoreButtonType } from '../components/core/CoreButton'
-import { AdjustmentsIcon, GlobeAltIcon } from '@heroicons/react/outline'
 import {
+  AdjustmentsIcon,
   BadgeCheckIcon,
   BookOpenIcon,
   BriefcaseIcon,
@@ -17,28 +17,30 @@ import {
   CursorClickIcon,
   DownloadIcon,
   FingerPrintIcon,
+  GlobeAltIcon,
   LightningBoltIcon,
+  MailOpenIcon,
   ShoppingBagIcon,
   StarIcon,
   SupportIcon,
   TrendingUpIcon,
-} from '@heroicons/react/solid'
+} from '@heroicons/react/outline'
 
 const FEATURES = [
   {
-    label: 'Highly configurable (from section item to product attributes)',
+    label: 'Highly configurable (from section item to product attributes).',
     icon: AdjustmentsIcon,
   },
   {
-    label: 'Easy-to-use CMS for admins',
+    label: 'Easy-to-use CMS for admins.',
     icon: CubeTransparentIcon,
   },
   {
-    label: 'A separate Docs project to smoothen your knowledge navigation',
+    label: 'A separate Docs project to smoothen your knowledge navigation.',
     icon: BookOpenIcon,
   },
   {
-    label: 'Advanced SEO & PWA practices',
+    label: 'Advanced SEO & PWA practices.',
     icon: DownloadIcon,
   },
   {
@@ -46,31 +48,31 @@ const FEATURES = [
     icon: TrendingUpIcon,
   },
   {
-    label: 'Secure user login and data management',
+    label: 'Secure user login and data management.',
     icon: FingerPrintIcon,
   },
   {
-    label: 'Ultra-fast pages rendering (even for dynamic pages)',
+    label: 'Ultra-fast pages rendering (even for dynamic pages).',
     icon: LightningBoltIcon,
   },
   {
-    label: 'Smooth ordering and payment experience for users',
+    label: 'Smooth ordering and payment experience for users.',
     icon: ShoppingBagIcon,
   },
   {
-    label: 'UX & DX at the core',
+    label: 'UX & DX at the core.',
     icon: CursorClickIcon,
   },
   {
-    label: 'Industry-best engineering practices from globally recognized organizations',
+    label: 'Industry-best engineering practices from globally recognized organizations.',
     icon: CodeIcon,
   },
   {
-    label: 'Cost-cutting strategies while maintaining high performance',
+    label: 'Cost-cutting strategies while maintaining high performance.',
     icon: CurrencyDollarIcon,
   },
   {
-    label: 'Tested end-to-end for almost a year',
+    label: 'Tested end-to-end for almost a year.',
     icon: BadgeCheckIcon,
   },
 ]
@@ -78,19 +80,19 @@ const FEATURES = [
 const PROJECTS = [
   {
     label: 'Website',
-    description: 'User-facing UI project.',
+    description: 'User-facing UI project',
   },
   {
     label: 'API',
-    description: 'Communicates with DB and provides API endpoints.',
+    description: 'Communicates with DB and provides API endpoints',
   },
   {
     label: 'CMS',
-    description: 'UI for admins to update.',
+    description: 'UI for admins to update',
   },
   {
     label: 'Documentation',
-    description: 'Extensive documentation for all 3 projects.',
+    description: 'Extensive documentation for all 3 projects',
   },
 ]
 
@@ -104,7 +106,7 @@ const STEPS = [
     icon: BriefcaseIcon,
   },
   {
-    label: 'We will continue to suppport you for lifetime. Consider us your own development team.',
+    label: 'We will continue to suppport you for lifetime. Consider us your own engineering team.',
     icon: SupportIcon,
   },
 ]
@@ -136,7 +138,7 @@ const Home: NextPage<IProps> = props => {
         </div>
       </div>
 
-      <div className="mt-8 lg:mt-12">
+      <div className="mt-10 lg:mt-12">
         <div className="font-medium font-primary-medium text-lg ">
           <span className="text-primaryTextBold">What is {appConfig.global.app.name}?</span>{' '}
           <span>
@@ -145,7 +147,7 @@ const Home: NextPage<IProps> = props => {
             lifetime support too :)
           </span>
         </div>
-        <div className="text-center lg:text-left mt-4">
+        <div className="flex items-center justify-center lg:justify-start mt-4">
           <CoreButton
             label="Interested?"
             size={CoreButtonSize.LARGE}
@@ -154,16 +156,16 @@ const Home: NextPage<IProps> = props => {
             onClick={scrollToInterested}
           />
           <CoreButton
-            label="Checkout Demo"
-            icon={GlobeAltIcon}
+            label={'Checkout Demo'}
             size={CoreButtonSize.LARGE}
             type={CoreButtonType.SOLID_SECONDARY}
             onClick={openDemoWebsite}
+            icon={GlobeAltIcon}
           />
         </div>
       </div>
 
-      <div className="mt-8 lg:mt-12">
+      <div className="mt-10 lg:mt-12">
         <div className="font-medium font-primary-medium text-xl text-primaryTextBold">-- Few top-level features --</div>
         <div className="mt-3 grid">
           {FEATURES.map((feature, index) => {
@@ -179,14 +181,14 @@ const Home: NextPage<IProps> = props => {
         </div>
       </div>
 
-      <div className="mt-8 lg:mt-12">
+      <div className="mt-10 lg:mt-12">
         <div className="font-medium font-primary-medium text-xl text-primaryTextBold">
           -- Projects included in suite --
         </div>
         <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-2">
           {PROJECTS.map((project, index) => {
             return (
-              <div key={index} className="border rounded p-4">
+              <div key={index} className="border rounded p-4 transition-all hover:shadow-md">
                 <div className="text-primary font-primary-medium font-medium">{project.label}</div>
                 <div>{project.description}</div>
               </div>
@@ -195,14 +197,17 @@ const Home: NextPage<IProps> = props => {
         </div>
       </div>
 
-      <div className="mt-8 lg:mt-12">
+      <div className="mt-10 lg:mt-12">
         <div className="font-medium font-primary-medium text-lg">
           <span className="text-primaryTextBold">Pricing?</span>{' '}
-          <span>You can own the entire suite for ${appConfig.order.priceInUSD}.</span>
+          <span>
+            You can own the entire suite for ${appConfig.order.priceInUSD.sale} (
+            <span className="line-through">${appConfig.order.priceInUSD.retail}</span>).
+          </span>
         </div>
       </div>
 
-      <div className="mt-8 lg:mt-12" id="interested-section">
+      <div className="mt-10 lg:mt-12" id="interested-section">
         <div className="font-medium font-primary-medium text-xl text-primaryTextBold">
           -- Over to you. Are you interested? --
         </div>
@@ -225,6 +230,7 @@ const Home: NextPage<IProps> = props => {
             type={CoreButtonType.SOLID_PRIMARY}
             className="mr-1"
             url={`mailto:yourrstoreonline@gmail.com?subject=${appConfig.order.mail.subject}&body=${appConfig.order.mail.body}`}
+            icon={MailOpenIcon}
           />
         </div>
       </div>

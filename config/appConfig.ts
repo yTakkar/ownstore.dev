@@ -12,7 +12,10 @@ const appConfig = {
     demoWebsiteUrl: process.env.YOUR_STORE_LANDING_WEB_DEMO_WEBSITE_URL,
   },
   order: {
-    priceInUSD: 699,
+    priceInUSD: {
+      retail: 899,
+      sale: 699,
+    },
     mail: {
       subject: `Interested for ${name}.`,
       body: '',
