@@ -1,4 +1,4 @@
-const name = 'YourStore'
+const name = 'OwnStore'
 
 const appConfig = {
   isDev: process.env.YOUR_STORE_LANDING_WEB_ENV?.includes('local'),
@@ -31,7 +31,7 @@ const appConfig = {
     ],
   },
   footer: {
-    copyrightText: `&copy; ${new Date().getFullYear()} YourStore. All rights reserved`,
+    copyrightText: `&copy; ${new Date().getFullYear()} ${name}. All rights reserved`,
   },
   integrations: {
     googleAnalytics: {
