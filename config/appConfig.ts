@@ -14,8 +14,8 @@ const appConfig = {
   },
   order: {
     priceInUSD: {
-      retail: 899,
-      sale: 699,
+      retail: 1091,
+      sale: 796,
     },
     mail: {
       subject: `Interested for ${name}.`,
