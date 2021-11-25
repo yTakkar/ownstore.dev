@@ -11,6 +11,7 @@ import {
   BookOpenIcon,
   BriefcaseIcon,
   ChatIcon,
+  ClockIcon,
   CodeIcon,
   CubeTransparentIcon,
   CurrencyDollarIcon,
@@ -28,7 +29,7 @@ import {
 
 const FEATURES = [
   {
-    label: 'Highly configurable (from section item to product attributes).',
+    label: 'Highly configurable (almost every data point).',
     icon: AdjustmentsIcon,
   },
   {
@@ -75,6 +76,10 @@ const FEATURES = [
     label: 'Tested end-to-end for almost a year.',
     icon: BadgeCheckIcon,
   },
+  {
+    label: 'Save almost a year of work.',
+    icon: ClockIcon,
+  },
 ]
 
 const PROJECTS = [
@@ -106,7 +111,7 @@ const STEPS = [
     icon: BriefcaseIcon,
   },
   {
-    label: 'We will continue to suppport you for lifetime. Consider us your own engineering team.',
+    label: 'We will continue to support you for lifetime with any queries. Consider us your own engineering team.',
     icon: SupportIcon,
   },
 ]
@@ -132,7 +137,7 @@ const Home: NextPage<IProps> = props => {
         <div className="font-medium font-primary-medium text-lg ">
           <span className="text-primaryTextBold">
             You need an online store for you business, but with complete ownership and no third-party or platform
-            dependency. Just like your own codebase?
+            dependency, just like your own codebase?
           </span>{' '}
           <span>We got you covered.</span>
         </div>
@@ -143,8 +148,7 @@ const Home: NextPage<IProps> = props => {
           <span className="text-primaryTextBold">What is {appConfig.global.app.name}?</span>{' '}
           <span>
             An end-to-end e-commerce solution that can be configured according to your business needs. To simply put,
-            you will receive a completely configurable system (set of projects) to set up your own online store. And
-            yes, lifetime support too :)
+            you will receive a completely configurable system (set of projects) to set up your own online store.
           </span>
         </div>
         <div className="flex items-center justify-center lg:justify-start mt-4">
@@ -166,7 +170,7 @@ const Home: NextPage<IProps> = props => {
       </div>
 
       <div className="mt-10 lg:mt-12">
-        <div className="font-medium font-primary-medium text-xl text-primaryTextBold">-- Few top-level features --</div>
+        <div className="font-medium font-primary-medium text-xl text-primaryTextBold">-- Few top-level benefits --</div>
         <div className="mt-3 grid">
           {FEATURES.map((feature, index) => {
             const Icon = feature.icon || StarIcon
