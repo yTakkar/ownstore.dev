@@ -137,6 +137,10 @@ const Home: NextPage<IProps> = props => {
     window.open(appConfig.global.demoWebsiteUrl, '_blank')
   }
 
+  const openMail = () => {
+    window.open(`mailto:${appConfig.global.app.emailAddress}?subject=${appConfig.order.mail.subject}`, '_blank')
+  }
+
   return (
     <div className="px-3">
       <div>
@@ -239,8 +243,8 @@ const Home: NextPage<IProps> = props => {
             size={CoreButtonSize.LARGE}
             type={CoreButtonType.SOLID_PRIMARY}
             className="mr-1"
-            url={`mailto:${appConfig.global.app.emailAddress}?subject=${appConfig.order.mail.subject}`}
             icon={MailOpenIcon}
+            onClick={openMail}
           />
         </div>
       </div>

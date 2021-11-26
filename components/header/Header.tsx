@@ -25,6 +25,7 @@ const Header: React.FC<IHeaderProps> = props => {
 
             <CoreLink
               url={`mailto:${appConfig.global.app.emailAddress}?subject=${appConfig.order.mail.subject}`}
+              isExternal
               className="flex font-medium font-primary-medium text-sm items-center group relative">
               <MailOpenIcon className="w-6 mr-1" />
             </CoreLink>
