@@ -26,7 +26,6 @@ import {
   SupportIcon,
   TrendingUpIcon,
 } from '@heroicons/react/outline'
-import { SCREEN_SIZE } from '../constants/constants'
 
 const FEATURES = [
   {
@@ -125,7 +124,7 @@ const Home: NextPage<IProps> = props => {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    setIsMobile(window.matchMedia(`(max-width: ${SCREEN_SIZE.LG - 1}px)`).matches)
+    setIsMobile(window.matchMedia(`(max-width: 369px)`).matches)
   }, [])
 
   const scrollToInterested = () => {
@@ -200,7 +199,7 @@ const Home: NextPage<IProps> = props => {
           {PROJECTS.map((project, index) => {
             return (
               <div key={index} className="border rounded p-4 transition-all hover:shadow-md">
-                <div className="text-primary font-primary-medium font-medium">{project.label}</div>
+                <div className="text-primaryTextBold font-primary-medium font-medium">{project.label}</div>
                 <div>{project.description}</div>
               </div>
             )

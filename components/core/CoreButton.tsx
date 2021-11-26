@@ -61,7 +61,7 @@ const CoreButton: React.FC<ICoreButtonProps> = props => {
           'cursor-auto': isDisabled,
 
           // types
-          'bg-primary text-white hover:bg-lightprimary focus:ring-primary border':
+          ' text-white focus:ring-chateauGreen bg-gradient-mixed bg-vertical-center bg-220 hover:bg-250 hover:bg-vertical-55':
             type === CoreButtonType.SOLID_PRIMARY && !isDisabled,
           'bg-gray200 border-gray200 text-blackHalfLight': type === CoreButtonType.SOLID_PRIMARY && isDisabled,
 

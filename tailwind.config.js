@@ -123,6 +123,7 @@ const tailwindConfig = {
       'gradient-to-bl': 'linear-gradient(to bottom left, var(--tw-gradient-stops))',
       'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
       'gradient-to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))',
+      'gradient-mixed': 'url("/images/gradient.png")',
     },
     backgroundOpacity: theme => theme('opacity'),
     backgroundPosition: {
@@ -135,11 +136,15 @@ const tailwindConfig = {
       'right-bottom': 'right bottom',
       'right-top': 'right top',
       top: 'top',
+      'vertical-center': '0 50%',
+      'vertical-55': '0 55%',
     },
     backgroundSize: {
       auto: 'auto',
       cover: 'cover',
       contain: 'contain',
+      220: '220%',
+      250: '250%',
     },
     blur: {
       0: '0',

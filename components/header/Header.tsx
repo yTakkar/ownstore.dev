@@ -4,7 +4,7 @@ import { APP_LOGO } from '../../constants/constants'
 import appConfig from '../../config/appConfig'
 import CoreLink from '../core/CoreLink'
 import CoreImage from '../core/CoreImage'
-import { GlobeAltIcon } from '@heroicons/react/outline'
+import { GlobeAltIcon, MailOpenIcon } from '@heroicons/react/outline'
 
 interface IHeaderProps {}
 
@@ -24,10 +24,9 @@ const Header: React.FC<IHeaderProps> = props => {
             </div>
 
             <CoreLink
-              url={appConfig.global.demoWebsiteUrl}
-              isExternal
+              url={`mailto:${appConfig.global.app.emailAddress}?subject=${appConfig.order.mail.subject}`}
               className="flex font-medium font-primary-medium text-sm items-center group relative">
-              <GlobeAltIcon className="w-6" />
+              <MailOpenIcon className="w-6 mr-1" />
             </CoreLink>
           </div>
         </div>
