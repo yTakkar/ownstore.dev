@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { IGlobalLayoutProps } from './_app'
 import { NextPage, GetStaticProps } from 'next'
 import { prepareHomePageSeo } from '../utils/seo/home'
@@ -26,6 +26,7 @@ import {
   SupportIcon,
   TrendingUpIcon,
 } from '@heroicons/react/outline'
+import { SCREEN_SIZE } from '../constants/constants'
 
 const FEATURES = [
   {
@@ -121,6 +122,12 @@ interface IProps extends IGlobalLayoutProps {
 }
 
 const Home: NextPage<IProps> = props => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    setIsMobile(window.matchMedia(`(max-width: ${SCREEN_SIZE.LG - 1}px)`).matches)
+  }, [])
+
   const scrollToInterested = () => {
     document.querySelector('#interested-section').scrollIntoView({
       behavior: 'smooth',
@@ -160,7 +167,7 @@ const Home: NextPage<IProps> = props => {
             onClick={scrollToInterested}
           />
           <CoreButton
-            label={'Checkout Demo'}
+            label={isMobile ? 'Demo' : 'Checkout Demo'}
             size={CoreButtonSize.LARGE}
             type={CoreButtonType.SOLID_SECONDARY}
             onClick={openDemoWebsite}

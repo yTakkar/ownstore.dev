@@ -4,13 +4,14 @@ import { APP_LOGO } from '../../constants/constants'
 import appConfig from '../../config/appConfig'
 import CoreLink from '../core/CoreLink'
 import CoreImage from '../core/CoreImage'
+import { GlobeAltIcon } from '@heroicons/react/outline'
 
 interface IHeaderProps {}
 
 const Header: React.FC<IHeaderProps> = props => {
   return (
     <div>
-      <nav className="top-nav lg:flex fixed top-0 left-0 right-0 bg-white shadow-md px-2 lg:px-4 py-2 lg:py-3 z-10">
+      <nav className="top-nav lg:flex fixed top-0 left-0 right-0 bg-white shadow-md px-3 lg:px-4 py-2 lg:py-3 z-10">
         <div className="container mx-auto">
           <div className="flex justify-between w-full items-center">
             <div className="flex items-center w-9/12 md:w-10/12 lg:w-auto">
@@ -21,6 +22,13 @@ const Header: React.FC<IHeaderProps> = props => {
                 {appConfig.global.app.name}
               </CoreLink>
             </div>
+
+            <CoreLink
+              url={appConfig.global.demoWebsiteUrl}
+              isExternal
+              className="flex font-medium font-primary-medium text-sm items-center group relative">
+              <GlobeAltIcon className="w-6" />
+            </CoreLink>
           </div>
         </div>
       </nav>
