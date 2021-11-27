@@ -29,15 +29,15 @@ import {
 
 const FEATURES = [
   {
-    label: 'Highly configurable (almost every data point).',
+    label: 'Highly configurable (almost every data point)',
     icon: AdjustmentsIcon,
   },
   {
-    label: 'Easy-to-use CMS for admins.',
+    label: 'Easy-to-use CMS for admins',
     icon: CubeTransparentIcon,
   },
   {
-    label: 'A separate Docs project to smoothen your knowledge navigation.',
+    label: 'Extensive documentation for almost everything',
     icon: BookOpenIcon,
   },
   {
@@ -49,35 +49,35 @@ const FEATURES = [
     icon: TrendingUpIcon,
   },
   {
-    label: 'Secure user login and data management.',
+    label: 'Secure user login and data management',
     icon: FingerPrintIcon,
   },
   {
-    label: 'Ultra-fast pages rendering (even for dynamic pages).',
+    label: 'Ultra-fast page rendering (even for dynamic pages)',
     icon: LightningBoltIcon,
   },
   {
-    label: 'Smooth ordering and payment experience for users.',
+    label: 'Smooth ordering and payment experience for users',
     icon: ShoppingBagIcon,
   },
   {
-    label: 'UX & DX at the core.',
+    label: 'UX & DX at the core',
     icon: CursorClickIcon,
   },
   {
-    label: 'Industry-best engineering practices from globally recognized organizations.',
+    label: 'Industry-best engineering practices from globally recognized organizations',
     icon: CodeIcon,
   },
   {
-    label: 'Cost-cutting strategies while maintaining high performance.',
+    label: 'Cost-cutting strategies while maintaining high performance',
     icon: CurrencyDollarIcon,
   },
   {
-    label: 'Tested end-to-end for almost a year.',
+    label: 'End-to-end tested for almost a year',
     icon: BadgeCheckIcon,
   },
   {
-    label: 'Save almost a year of work.',
+    label: 'Save almost a year of work',
     icon: ClockIcon,
   },
 ]
@@ -85,7 +85,7 @@ const FEATURES = [
 const PROJECTS = [
   {
     label: 'Website',
-    description: 'User-facing UI project',
+    description: 'User-facing web application',
   },
   {
     label: 'API',
@@ -111,7 +111,7 @@ const STEPS = [
     icon: BriefcaseIcon,
   },
   {
-    label: 'We will continue to support you for lifetime with any queries. Consider us your own engineering team.',
+    label: 'We will continue to support you for lifetime with any queries. Consider us your engineering team.',
     icon: SupportIcon,
   },
 ]
@@ -146,7 +146,7 @@ const Home: NextPage<IProps> = props => {
       <div>
         <div className="font-medium font-primary-medium text-lg ">
           <span className="text-primaryTextBold">
-            You need an online store for you business, but with complete ownership and no third-party or platform
+            You need an online store for your business, but with complete ownership and no third-party or platform
             dependency, just like your own codebase?
           </span>{' '}
           <span>We got you covered.</span>
@@ -158,7 +158,7 @@ const Home: NextPage<IProps> = props => {
           <span className="text-primaryTextBold">What is {appConfig.global.app.name}?</span>{' '}
           <span>
             An end-to-end e-commerce solution that can be configured according to your business needs. To simply put,
-            you will receive a completely configurable system (set of projects) to set up your own online store.
+            you will receive a completely configurable system (set of projects) to set up your online store.
           </span>
         </div>
         <div className="flex items-center justify-center lg:justify-start mt-4">
@@ -197,7 +197,7 @@ const Home: NextPage<IProps> = props => {
 
       <div className="mt-10 lg:mt-12">
         <div className="font-medium font-primary-medium text-xl text-primaryTextBold">
-          -- Projects included in suite --
+          -- Projects included in this suite --
         </div>
         <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-2">
           {PROJECTS.map((project, index) => {
