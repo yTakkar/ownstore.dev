@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from 'react'
 import { getHomePageUrl } from '../../utils/home'
-import { APP_LOGO } from '../../constants/constants'
+import { APP_LOGO, SOCIAL_ICONS_SRC_MAP } from '../../constants/constants'
 import appConfig from '../../config/appConfig'
 import CoreLink from '../core/CoreLink'
 import CoreImage from '../core/CoreImage'
@@ -24,7 +24,7 @@ const Header: React.FC<IHeaderProps> = props => {
             </div>
 
             <CoreLink
-              url={`mailto:${appConfig.global.app.emailAddress}?subject=${appConfig.order.mail.subject}`}
+              url={`mailto:${appConfig.global.app.emailAddress}?subject=${appConfig.order.contact.subject}`}
               isExternal
               className="flex font-medium font-primary-medium text-sm items-center group relative">
               <MailOpenIcon className="w-6 mr-1" />

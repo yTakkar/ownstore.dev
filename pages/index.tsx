@@ -26,6 +26,8 @@ import {
   SupportIcon,
   TrendingUpIcon,
 } from '@heroicons/react/outline'
+import { SOCIAL_ICONS_SRC_MAP } from '../constants/constants'
+import CoreLink from '../components/core/CoreLink'
 
 const FEATURES = [
   {
@@ -138,7 +140,7 @@ const Home: NextPage<IProps> = props => {
   }
 
   const openMail = () => {
-    window.open(`mailto:${appConfig.global.app.emailAddress}?subject=${appConfig.order.mail.subject}`, '_blank')
+    window.open(`mailto:${appConfig.global.app.emailAddress}?subject=${appConfig.order.contact.subject}`, '_blank')
   }
 
   return (
@@ -237,7 +239,7 @@ const Home: NextPage<IProps> = props => {
             )
           })}
         </div>
-        <div className="text-center lg:text-left mt-4">
+        <div className="flex justify-center lg:justify-start items-center mt-4">
           <CoreButton
             label="Drop us a message"
             size={CoreButtonSize.LARGE}
@@ -246,6 +248,9 @@ const Home: NextPage<IProps> = props => {
             icon={MailOpenIcon}
             onClick={openMail}
           />
+          <CoreLink url={`https://wa.me/+918104570640?text=${appConfig.order.contact.subject}`} isExternal>
+            <CoreImage url={SOCIAL_ICONS_SRC_MAP.WHATSAPP} alt="WhatsApp" className="w-7 ml-3 md:ml-3" />
+          </CoreLink>
         </div>
       </div>
     </div>
