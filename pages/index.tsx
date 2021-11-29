@@ -168,7 +168,7 @@ const Home: NextPage<IProps> = props => {
             label="Interested?"
             size={CoreButtonSize.LARGE}
             type={CoreButtonType.SOLID_PRIMARY}
-            className="mr-1"
+            className="mr-2"
             onClick={scrollToInterested}
           />
           <CoreButton
