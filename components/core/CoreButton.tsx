@@ -65,7 +65,7 @@ const CoreButton: React.FC<ICoreButtonProps> = props => {
             type === CoreButtonType.SOLID_PRIMARY && !isDisabled,
           'bg-gray200 border-gray200 text-blackHalfLight': type === CoreButtonType.SOLID_PRIMARY && isDisabled,
 
-          'bg-white text-primary border-primary hover:bg-denim focus:ring-primary focus:ring-opacity-30 border':
+          'bg-white text-primary border-periwinkleGray hover:bg-denim focus:ring-primary focus:ring-opacity-30 border':
             type === CoreButtonType.SOLID_SECONDARY && !isDisabled,
           'bg-white border text-blackHalfLight border-gray600 ': type === CoreButtonType.SOLID_SECONDARY && isDisabled,
 

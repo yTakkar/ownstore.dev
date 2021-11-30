@@ -22,6 +22,7 @@ import {
   LightningBoltIcon,
   MailOpenIcon,
   ShoppingBagIcon,
+  SparklesIcon,
   StarIcon,
   SupportIcon,
   TrendingUpIcon,
@@ -33,6 +34,10 @@ const FEATURES = [
   {
     label: 'Highly configurable (almost every data point)',
     icon: AdjustmentsIcon,
+  },
+  {
+    label: 'Save almost a year of work',
+    icon: ClockIcon,
   },
   {
     label: 'Easy-to-use CMS for admins',
@@ -78,10 +83,6 @@ const FEATURES = [
     label: 'End-to-end tested for almost a year',
     icon: BadgeCheckIcon,
   },
-  {
-    label: 'Save almost a year of work',
-    icon: ClockIcon,
-  },
 ]
 
 const PROJECTS = [
@@ -91,7 +92,7 @@ const PROJECTS = [
   },
   {
     label: 'API',
-    description: 'Communicates with DB and provides API endpoints',
+    description: 'Handles backend-related job',
   },
   {
     label: 'CMS',
@@ -105,7 +106,7 @@ const PROJECTS = [
 
 const STEPS = [
   {
-    label: 'The first step is to connect. Long-term connection is all we need :)',
+    label: `If you're interested, let us know. We will get back to you within 30 mins. We'll discuss your business needs.`,
     icon: ChatIcon,
   },
   {
@@ -113,7 +114,11 @@ const STEPS = [
     icon: BriefcaseIcon,
   },
   {
-    label: 'We will continue to support you for lifetime with any queries. Consider us your engineering team.',
+    label: `With detailed docs, your store will be up and running instantly.`,
+    icon: SparklesIcon,
+  },
+  {
+    label: `We're here to help you with any queries. For lifetime.`,
     icon: SupportIcon,
   },
 ]
@@ -146,7 +151,7 @@ const Home: NextPage<IProps> = props => {
   return (
     <div className="px-3">
       <div>
-        <div className="font-medium font-primary-medium text-lg ">
+        <div className="text-lg ">
           <span className="text-primaryTextBold">
             You need an online store for your business, but with complete ownership and no third-party or platform
             dependency, just like your own codebase?
@@ -156,11 +161,11 @@ const Home: NextPage<IProps> = props => {
       </div>
 
       <div className="mt-10 lg:mt-12">
-        <div className="font-medium font-primary-medium text-lg ">
+        <div className="text-lg ">
           <span className="text-primaryTextBold">What is {appConfig.global.app.name}?</span>{' '}
           <span>
             An end-to-end e-commerce solution that can be configured according to your business needs. To simply put,
-            you will receive a completely configurable system (set of projects) to set up your online store.
+            you will receive a set of configurable projects to set up your online store.
           </span>
         </div>
         <div className="flex items-center justify-center lg:justify-start mt-4">
@@ -182,7 +187,9 @@ const Home: NextPage<IProps> = props => {
       </div>
 
       <div className="mt-10 lg:mt-12">
-        <div className="font-medium font-primary-medium text-xl text-primaryTextBold">-- Few top-level benefits --</div>
+        <div className="font-medium font-primary-medium text-xl md:text-2xl text-primaryTextBold">
+          Few top-level benefits 🚀
+        </div>
         <div className="mt-3 grid">
           {FEATURES.map((feature, index) => {
             const Icon = feature.icon || StarIcon
@@ -198,13 +205,13 @@ const Home: NextPage<IProps> = props => {
       </div>
 
       <div className="mt-10 lg:mt-12">
-        <div className="font-medium font-primary-medium text-xl text-primaryTextBold">
-          -- Projects included in this suite --
+        <div className="font-medium font-primary-medium text-xl md:text-2xl text-primaryTextBold">
+          Projects included in this suite 🧳
         </div>
         <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-2">
           {PROJECTS.map((project, index) => {
             return (
-              <div key={index} className="border rounded p-4 transition-all hover:shadow-md">
+              <div key={index} className="border border-periwinkleGray rounded p-4 transition-all hover:shadow">
                 <div className="text-primaryTextBold font-primary-medium font-medium">{project.label}</div>
                 <div>{project.description}</div>
               </div>
@@ -224,8 +231,8 @@ const Home: NextPage<IProps> = props => {
       </div>
 
       <div className="mt-10 lg:mt-12" id="interested-section">
-        <div className="font-medium font-primary-medium text-xl text-primaryTextBold">
-          -- Over to you. Are you interested? --
+        <div className="font-medium font-primary-medium text-xl md:text-2xl text-primaryTextBold">
+          Over to you. Are you interested? 👋
         </div>
         <div className="mt-3 grid">
           {STEPS.map((step, index) => {

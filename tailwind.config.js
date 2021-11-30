@@ -41,6 +41,8 @@ const tailwindConfig = {
       gray1000: '#1d1e1f',
 
       periwinkleGray: '#c6d7eb',
+      doveGray: '#717171',
+      periwinkleGray: '#c6d7eb',
 
       mineShaft: '#282828',
 
