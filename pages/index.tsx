@@ -190,7 +190,7 @@ const Home: NextPage<IProps> = props => {
         <div className="font-medium font-primary-medium text-xl md:text-2xl text-primaryTextBold">
           Few top-level benefits 🚀
         </div>
-        <div className="mt-3 grid">
+        <div className="mt-4 grid">
           {FEATURES.map((feature, index) => {
             const Icon = feature.icon || StarIcon
 
@@ -208,7 +208,7 @@ const Home: NextPage<IProps> = props => {
         <div className="font-medium font-primary-medium text-xl md:text-2xl text-primaryTextBold">
           Projects included in this suite 🧳
         </div>
-        <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-2">
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2">
           {PROJECTS.map((project, index) => {
             return (
               <div key={index} className="border border-periwinkleGray rounded p-4 transition-all hover:shadow">
@@ -234,7 +234,7 @@ const Home: NextPage<IProps> = props => {
         <div className="font-medium font-primary-medium text-xl md:text-2xl text-primaryTextBold">
           Over to you. Are you interested? 👋
         </div>
-        <div className="mt-3 grid">
+        <div className="mt-4 grid">
           {STEPS.map((step, index) => {
             const Icon = step.icon || StarIcon
 
