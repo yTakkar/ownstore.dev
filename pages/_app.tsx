@@ -40,7 +40,7 @@ const MyApp: NextPage<IProps> = props => {
           <Component {...pageProps} key={router.route} />
         </PageContainer>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

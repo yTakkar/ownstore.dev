@@ -221,11 +221,11 @@ const Home: NextPage<IProps> = props => {
       </div>
 
       <div className="mt-10 lg:mt-12 flex justify-center">
-        <div className="bg-aliceBlue border border-periwinkleGray px-4 py-6 rounded-lg w-full lg:w-8/12 flex flex-col items-center">
+        <div className="bg-aliceBlue border border-periwinkleGray px-6 py-6 rounded-lg w-full lg:w-8/12 flex flex-col items-center">
           <CoreImage
             url={APP_LOGO.DEFAULT}
             alt={appConfig.global.app.name}
-            className="w-20 border border-periwinkleGray rounded-full shadow"
+            className="w-24 border border-periwinkleGray rounded-full shadow"
           />
 
           <div className="text-center mt-4">
@@ -249,7 +249,7 @@ const Home: NextPage<IProps> = props => {
             const Icon = step.icon || StarIcon
 
             return (
-              <div key={index} className="mb-4 md:mb-3 inline-flex items-start md:items-center text-base md:text-lg">
+              <div key={index} className="mb-4 md:mb-3 inline-flex items-start text-base md:text-lg">
                 <Icon className="min-w-6 min-h-6 w-6 h-6 mr-2 text-primaryTextBold" />
                 <span>{step.label}</span>
               </div>
