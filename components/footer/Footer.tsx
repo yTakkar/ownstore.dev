@@ -52,7 +52,7 @@ const Footer: React.FC<IFooterProps> = props => {
         </div>
       </div>
 
-      <div className="flex justify-end mb-6 mr-6">
+      <div className="flex justify-end pb-10 mr-6">
         {appConfig.company.socialLinks.map((socialLink, index) => {
           const socialIconSrc = SOCIAL_ICONS_SRC_MAP[socialLink.type] || SOCIAL_ICONS_SRC_MAP.GLOBE
 
