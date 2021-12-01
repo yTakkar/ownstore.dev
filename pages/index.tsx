@@ -153,7 +153,7 @@ const Home: NextPage<IProps> = props => {
       <div>
         <div className="text-lg ">
           <span className="text-primaryTextBold">
-            You need an online store for your business, but with complete ownership and no third-party or platform
+            Do you need an online store for your business, but with complete ownership and no third-party or platform
             dependency, just like your own codebase?
           </span>{' '}
           <span>We got you covered.</span>
