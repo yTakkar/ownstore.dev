@@ -27,7 +27,7 @@ import {
   SupportIcon,
   TrendingUpIcon,
 } from '@heroicons/react/outline'
-import { SOCIAL_ICONS_SRC_MAP } from '../constants/constants'
+import { APP_LOGO, SOCIAL_ICONS_SRC_MAP } from '../constants/constants'
 import CoreLink from '../components/core/CoreLink'
 
 const FEATURES = [
@@ -36,15 +36,15 @@ const FEATURES = [
     icon: AdjustmentsIcon,
   },
   {
-    label: 'Save almost a year of work',
+    label: 'Save almost a year of work.',
     icon: ClockIcon,
   },
   {
-    label: 'Easy-to-use CMS for admins',
+    label: 'Easy-to-use CMS for admins.',
     icon: CubeTransparentIcon,
   },
   {
-    label: 'Extensive documentation for almost everything',
+    label: 'Extensive documentation for almost everything.',
     icon: BookOpenIcon,
   },
   {
@@ -56,7 +56,7 @@ const FEATURES = [
     icon: TrendingUpIcon,
   },
   {
-    label: 'Secure user login and data management',
+    label: 'Secure user login and data management.',
     icon: FingerPrintIcon,
   },
   {
@@ -64,23 +64,23 @@ const FEATURES = [
     icon: LightningBoltIcon,
   },
   {
-    label: 'Smooth ordering and payment experience for users',
+    label: 'Smooth ordering and payment experience for users.',
     icon: ShoppingBagIcon,
   },
   {
-    label: 'UX & DX at the core',
+    label: 'UX & DX at the core.',
     icon: CursorClickIcon,
   },
   {
-    label: 'Industry-best engineering practices from globally recognized organizations',
+    label: 'Industry-best engineering practices from globally recognized organizations.',
     icon: CodeIcon,
   },
   {
-    label: 'Cost-cutting strategies while maintaining high performance',
+    label: 'Cost-cutting strategies while maintaining high performance.',
     icon: CurrencyDollarIcon,
   },
   {
-    label: 'End-to-end tested for almost a year',
+    label: 'End-to-end tested for almost a year.',
     icon: BadgeCheckIcon,
   },
 ]
@@ -106,7 +106,7 @@ const PROJECTS = [
 
 const STEPS = [
   {
-    label: `If you're interested, let us know. We will get back to you within 30 mins. We'll discuss your business needs.`,
+    label: `If you're interested, let us know. We will get back to you within 30 mins to discuss your business needs.`,
     icon: ChatIcon,
   },
   {
@@ -211,7 +211,7 @@ const Home: NextPage<IProps> = props => {
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2">
           {PROJECTS.map((project, index) => {
             return (
-              <div key={index} className="border border-periwinkleGray rounded p-4 transition-all hover:shadow">
+              <div key={index} className="border border-periwinkleGray rounded p-4 transition-all">
                 <div className="text-primaryTextBold font-primary-medium font-medium">{project.label}</div>
                 <div>{project.description}</div>
               </div>
@@ -220,13 +220,23 @@ const Home: NextPage<IProps> = props => {
         </div>
       </div>
 
-      <div className="mt-10 lg:mt-12">
-        <div className="font-medium font-primary-medium text-lg">
-          <span className="text-primaryTextBold">Pricing?</span>{' '}
-          <span>
-            You can own the entire suite for ${appConfig.order.priceInUSD.sale} (
-            <span className="line-through">${appConfig.order.priceInUSD.retail}</span>).
-          </span>
+      <div className="mt-10 lg:mt-12 flex justify-center">
+        <div className="bg-aliceBlue border border-periwinkleGray px-4 py-6 rounded-lg w-full lg:w-8/12 flex flex-col items-center">
+          <CoreImage
+            url={APP_LOGO.DEFAULT}
+            alt={appConfig.global.app.name}
+            className="w-20 border border-periwinkleGray rounded-full shadow"
+          />
+
+          <div className="text-center mt-4">
+            <div>This package includes the entire suite.</div>
+            <div className="mt-1">
+              <span className="font-medium font-primary-medium text-primaryTextBold">
+                ${appConfig.order.priceInUSD.sale}{' '}
+              </span>
+              <span className="line-through">(${appConfig.order.priceInUSD.retail})</span>
+            </div>
+          </div>
         </div>
       </div>
 

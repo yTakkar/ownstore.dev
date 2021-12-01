@@ -42,7 +42,6 @@ const tailwindConfig = {
 
       periwinkleGray: '#c6d7eb',
       doveGray: '#717171',
-      periwinkleGray: '#c6d7eb',
 
       mineShaft: '#282828',
 
@@ -54,6 +53,7 @@ const tailwindConfig = {
       funBlue: '#1868ae',
       ceruleanBlue: '#12a4d9',
       chillBlue: '#077b8a',
+      aliceBlue: '#F7FBFF',
       shipCove: '#6883bc',
 
       sinbad: '#a2d5c6',
