@@ -29,6 +29,7 @@ import {
 } from '@heroicons/react/outline'
 import { APP_LOGO, SOCIAL_ICONS_SRC_MAP } from '../constants/constants'
 import CoreLink from '../components/core/CoreLink'
+import { HeartIcon } from '@heroicons/react/solid'
 
 const FEATURES = [
   {
@@ -106,10 +107,6 @@ const PROJECTS = [
 
 const STEPS = [
   {
-    label: `If you're interested, let us know. We will get back to you within 30 mins to discuss your business needs.`,
-    icon: ChatIcon,
-  },
-  {
     label: 'Once payment is processed, the suite will be shared with you.',
     icon: BriefcaseIcon,
   },
@@ -144,8 +141,8 @@ const Home: NextPage<IProps> = props => {
     window.open(appConfig.global.demoWebsiteUrl, '_blank')
   }
 
-  const openMail = () => {
-    window.open(`mailto:${appConfig.global.app.emailAddress}?subject=${appConfig.order.contact.subject}`, '_blank')
+  const onCTAClick = () => {
+    window.open(appConfig.global.gumroadUrl, '_blank')
   }
 
   return (
@@ -258,16 +255,13 @@ const Home: NextPage<IProps> = props => {
         </div>
         <div className="flex justify-center lg:justify-start items-center mt-4">
           <CoreButton
-            label="Drop us a message"
+            label="Yes, I'm interested!"
             size={CoreButtonSize.LARGE}
             type={CoreButtonType.SOLID_PRIMARY}
             className="mr-1"
-            icon={MailOpenIcon}
-            onClick={openMail}
+            icon={HeartIcon}
+            onClick={onCTAClick}
           />
-          <CoreLink url={`https://wa.me/+918104570640?text=${appConfig.order.contact.subject}`} isExternal>
-            <CoreImage url={SOCIAL_ICONS_SRC_MAP.WHATSAPP} alt="WhatsApp" className="w-7 ml-3 md:ml-3" />
-          </CoreLink>
         </div>
       </div>
     </div>

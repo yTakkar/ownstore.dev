@@ -24,10 +24,10 @@ const Header: React.FC<IHeaderProps> = props => {
             </div>
 
             <CoreLink
-              url={`mailto:${appConfig.global.app.emailAddress}?subject=${appConfig.order.contact.subject}`}
+              url={appConfig.global.demoWebsiteUrl}
               isExternal
               className="flex font-medium font-primary-medium text-sm items-center group relative">
-              <MailOpenIcon className="w-6 mr-1" />
+              <GlobeAltIcon className="w-6 mr-1" />
             </CoreLink>
           </div>
         </div>
