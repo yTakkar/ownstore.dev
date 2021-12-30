@@ -26,7 +26,10 @@ const Header: React.FC<IHeaderProps> = props => {
             <CoreLink
               url={appConfig.global.demoWebsiteUrl}
               isExternal
-              className="flex font-medium font-primary-medium text-sm items-center group relative">
+              className="flex font-medium font-primary-medium text-sm items-center group relative"
+              onClick={() => {
+                ga('event', 'icon-demo')
+              }}>
               <GlobeAltIcon className="w-6 mr-1" />
             </CoreLink>
           </div>

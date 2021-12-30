@@ -28,7 +28,6 @@ import {
   TrendingUpIcon,
 } from '@heroicons/react/outline'
 import { APP_LOGO, SOCIAL_ICONS_SRC_MAP } from '../constants/constants'
-import CoreLink from '../components/core/CoreLink'
 import { HeartIcon } from '@heroicons/react/solid'
 
 const FEATURES = [
@@ -135,14 +134,17 @@ const Home: NextPage<IProps> = props => {
     document.querySelector('#interested-section').scrollIntoView({
       behavior: 'smooth',
     })
+    ga('event', 'cta-interested')
   }
 
   const openDemoWebsite = () => {
     window.open(appConfig.global.demoWebsiteUrl, '_blank')
+    ga('event', 'cta-demo')
   }
 
   const onCTAClick = () => {
     window.open(appConfig.global.gumroadUrl, '_blank')
+    ga('event', 'cta-buy')
   }
 
   return (
