@@ -16,7 +16,7 @@ const appConfig = {
   order: {
     priceInUSD: {
       retail: 1091,
-      sale: 499,
+      sale: 399,
     },
     contact: {
       subject: `Interested for ${name}.`,
