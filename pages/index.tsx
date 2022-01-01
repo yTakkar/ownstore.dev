@@ -13,6 +13,7 @@ import {
   ChatIcon,
   ClockIcon,
   CodeIcon,
+  CogIcon,
   CubeTransparentIcon,
   CurrencyDollarIcon,
   CursorClickIcon,
@@ -116,6 +117,10 @@ const STEPS = [
   {
     label: `We're here to help you with any queries. For lifetime.`,
     icon: SupportIcon,
+  },
+  {
+    label: `You can also hire the author as a consultant to setup the store for you.`,
+    icon: CogIcon,
   },
 ]
 
