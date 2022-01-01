@@ -120,7 +120,7 @@ const STEPS = [
   },
   {
     label: `You can also hire the author as a consultant to setup the store for you.`,
-    icon: CogIcon,
+    icon: CodeIcon,
   },
 ]
 
