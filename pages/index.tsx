@@ -33,7 +33,7 @@ import { HeartIcon } from '@heroicons/react/solid'
 
 const FEATURES = [
   {
-    label: 'Highly configurable (almost every data point)',
+    label: 'Highly configurable (almost every data point and UI element)',
     icon: AdjustmentsIcon,
   },
   {
