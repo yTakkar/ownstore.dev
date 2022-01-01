@@ -33,7 +33,7 @@ import { HeartIcon } from '@heroicons/react/solid'
 
 const FEATURES = [
   {
-    label: 'Highly configurable (almost every data point and UI element)',
+    label: 'Highly configurable (almost everything!)',
     icon: AdjustmentsIcon,
   },
   {
@@ -168,6 +168,7 @@ const Home: NextPage<IProps> = props => {
             you will receive a set of configurable projects to set up your online store.
           </span>
         </div>
+
         <div className="flex items-center justify-center lg:justify-start mt-4">
           <CoreButton
             label="Interested?"
@@ -184,6 +185,11 @@ const Home: NextPage<IProps> = props => {
             icon={GlobeAltIcon}
           />
         </div>
+      </div>
+
+      <div className="text-lg mt-4">
+        <span className="text-primaryTextBold">Please note: </span>{' '}
+        <span>The demo includes only dummy data. This is a basic setup.</span>
       </div>
 
       <div className="mt-10 lg:mt-12">
