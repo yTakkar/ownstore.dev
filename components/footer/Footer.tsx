@@ -34,7 +34,7 @@ const Footer: React.FC<IFooterProps> = props => {
     <footer className="bg-aliceBlue mt-10 border-t border-periwinkleGray">
       <div className="flex flex-col items-center py-24">
         <CoreImage
-          url={'https://pbs.twimg.com/profile_images/1326480208413687810/AlRRkKBG_400x400.jpg'}
+          url={'https://pbs.twimg.com/profile_images/1477226450172276738/eHj1MKps_400x400.jpg'}
           alt="Author"
           className="w-20 rounded-full"
         />
