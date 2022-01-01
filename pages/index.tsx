@@ -107,10 +107,6 @@ const PROJECTS = [
 
 const STEPS = [
   {
-    label: 'Once payment is processed, the suite will be shared with you.',
-    icon: BriefcaseIcon,
-  },
-  {
     label: `With detailed docs, your store will be up and running instantly.`,
     icon: SparklesIcon,
   },
