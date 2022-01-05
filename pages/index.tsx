@@ -18,6 +18,7 @@ import {
   CurrencyDollarIcon,
   CursorClickIcon,
   DownloadIcon,
+  ExternalLinkIcon,
   FingerPrintIcon,
   GlobeAltIcon,
   LightningBoltIcon,
@@ -30,6 +31,7 @@ import {
 } from '@heroicons/react/outline'
 import { APP_LOGO, SOCIAL_ICONS_SRC_MAP } from '../constants/constants'
 import { HeartIcon } from '@heroicons/react/solid'
+import CoreLink from '../components/core/CoreLink'
 
 const FEATURES = [
   {
@@ -90,33 +92,26 @@ const PROJECTS = [
   {
     label: 'Website',
     description: 'User-facing web application',
+    demoUrl: appConfig.demo.website,
+    githubUrl: appConfig.github.website,
   },
   {
     label: 'API',
     description: 'Handles backend-related job',
+    demoUrl: appConfig.demo.api,
+    githubUrl: appConfig.github.api,
   },
   {
     label: 'CMS',
     description: 'UI for admins to update',
+    demoUrl: appConfig.demo.cms,
+    githubUrl: appConfig.github.cms,
   },
   {
     label: 'Documentation',
     description: 'Extensive documentation for all 3 projects',
-  },
-]
-
-const STEPS = [
-  {
-    label: `With detailed docs, your store will be up and running instantly.`,
-    icon: SparklesIcon,
-  },
-  {
-    label: `We're here to help you with any queries. For lifetime.`,
-    icon: SupportIcon,
-  },
-  {
-    label: `You can also hire the author as a consultant to setup the store for you.`,
-    icon: CodeIcon,
+    demoUrl: appConfig.demo.doc,
+    githubUrl: appConfig.github.doc,
   },
 ]
 
@@ -131,21 +126,9 @@ const Home: NextPage<IProps> = props => {
     setIsMobile(window.matchMedia(`(max-width: 369px)`).matches)
   }, [])
 
-  const scrollToInterested = () => {
-    document.querySelector('#interested-section').scrollIntoView({
-      behavior: 'smooth',
-    })
-    ga('event', 'cta-interested')
-  }
-
   const openDemoWebsite = () => {
-    window.open(appConfig.global.demoWebsiteUrl, '_blank')
+    window.open(appConfig.demo.website, '_blank')
     ga('event', 'cta-demo')
-  }
-
-  const onCTAClick = () => {
-    window.open(appConfig.global.gumroadUrl, '_blank')
-    ga('event', 'cta-buy')
   }
 
   return (
@@ -171,25 +154,60 @@ const Home: NextPage<IProps> = props => {
 
         <div className="flex items-center justify-center lg:justify-start mt-4">
           <CoreButton
-            label="Interested?"
+            label={'Checkout Demo'}
             size={CoreButtonSize.LARGE}
             type={CoreButtonType.SOLID_PRIMARY}
-            className="mr-2"
-            onClick={scrollToInterested}
-          />
-          <CoreButton
-            label={isMobile ? 'Demo' : 'Checkout Demo'}
-            size={CoreButtonSize.LARGE}
-            type={CoreButtonType.SOLID_SECONDARY}
             onClick={openDemoWebsite}
             icon={GlobeAltIcon}
+            className="mr-4"
           />
+          <CoreLink
+            url={appConfig.github.org}
+            isExternal
+            onClick={() => {
+              ga('event', 'cta-github')
+            }}>
+            <CoreImage
+              url={SOCIAL_ICONS_SRC_MAP.GITHUB}
+              alt={`${appConfig.global.app.name} source code on GitHub`}
+              className="w-9 transition-all hover:scale-105"
+            />
+          </CoreLink>
         </div>
       </div>
 
       <div className="text-lg mt-4">
         <span className="text-primaryTextBold">Please note: </span>{' '}
         <span>The demo includes only dummy data. This is a basic setup.</span>
+      </div>
+
+      <div className="mt-10 lg:mt-12">
+        <div className="font-medium font-primary-medium text-xl md:text-2xl text-primaryTextBold">
+          Projects included in this suite 🧳
+        </div>
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2">
+          {PROJECTS.map((project, index) => {
+            return (
+              <div key={index} className="border border-periwinkleGray rounded p-4 transition-all relative">
+                <div className="text-primaryTextBold font-primary-medium font-medium">{project.label}</div>
+                <div>{project.description}</div>
+
+                <div className="absolute top-2 right-2 flex items-center">
+                  <CoreLink url={project.githubUrl}>
+                    <CoreImage
+                      url={SOCIAL_ICONS_SRC_MAP.GITHUB}
+                      alt={`${project.label} source code on GitHub`}
+                      className="w-4 h-4 mr-2 cursor-pointer"
+                    />
+                  </CoreLink>
+                  <CoreLink url={project.demoUrl} isExternal>
+                    <ExternalLinkIcon className="w-4 h-4 cursor-pointer" />
+                  </CoreLink>
+                </div>
+              </div>
+            )
+          })}
+        </div>
       </div>
 
       <div className="mt-10 lg:mt-12">
@@ -211,66 +229,11 @@ const Home: NextPage<IProps> = props => {
       </div>
 
       <div className="mt-10 lg:mt-12">
-        <div className="font-medium font-primary-medium text-xl md:text-2xl text-primaryTextBold">
-          Projects included in this suite 🧳
-        </div>
-        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2">
-          {PROJECTS.map((project, index) => {
-            return (
-              <div key={index} className="border border-periwinkleGray rounded p-4 transition-all">
-                <div className="text-primaryTextBold font-primary-medium font-medium">{project.label}</div>
-                <div>{project.description}</div>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-
-      <div className="mt-10 lg:mt-12 flex justify-center">
-        <div className="bg-aliceBlue border border-periwinkleGray px-6 py-6 rounded-lg w-full lg:w-8/12 flex flex-col items-center">
-          <CoreImage
-            url={APP_LOGO.DEFAULT}
-            alt={appConfig.global.app.name}
-            className="w-24 border border-periwinkleGray rounded-full shadow"
-          />
-
-          <div className="text-center mt-4">
-            <div>This package includes the entire suite.</div>
-            <div className="mt-1">
-              <span className="font-medium font-primary-medium text-primaryTextBold">
-                ${appConfig.order.priceInUSD.sale}{' '}
-              </span>
-              <span className="line-through">(${appConfig.order.priceInUSD.retail})</span>
-            </div>
+        <div className="font-medium font-primary-medium text-xl md:text-2xl text-primaryTextBold">Need help? 👋</div>
+        <div className="mt-4">
+          <div className="mb-4 md:mb-3 inline-flex items-start text-base md:text-lg">
+            <span>You can also hire the author as a consultant to help set up your store.</span>
           </div>
-        </div>
-      </div>
-
-      <div className="mt-10 lg:mt-12" id="interested-section">
-        <div className="font-medium font-primary-medium text-xl md:text-2xl text-primaryTextBold">
-          Over to you. Are you interested? 👋
-        </div>
-        <div className="mt-4 grid">
-          {STEPS.map((step, index) => {
-            const Icon = step.icon || StarIcon
-
-            return (
-              <div key={index} className="mb-4 md:mb-3 inline-flex items-start text-base md:text-lg">
-                <Icon className="min-w-6 min-h-6 w-6 h-6 mr-2 text-primaryTextBold" />
-                <span>{step.label}</span>
-              </div>
-            )
-          })}
-        </div>
-        <div className="flex justify-center lg:justify-start items-center mt-4">
-          <CoreButton
-            label="Yes, I'm interested!"
-            size={CoreButtonSize.LARGE}
-            type={CoreButtonType.SOLID_PRIMARY}
-            className="mr-1"
-            icon={HeartIcon}
-            onClick={onCTAClick}
-          />
         </div>
       </div>
     </div>

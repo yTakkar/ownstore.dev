@@ -24,13 +24,17 @@ const Header: React.FC<IHeaderProps> = props => {
             </div>
 
             <CoreLink
-              url={appConfig.global.demoWebsiteUrl}
+              url={appConfig.github.org}
               isExternal
               className="flex font-medium font-primary-medium text-sm items-center group relative"
               onClick={() => {
                 ga('event', 'icon-demo')
               }}>
-              <GlobeAltIcon className="w-6 mr-1" />
+              <CoreImage
+                url={SOCIAL_ICONS_SRC_MAP.GITHUB}
+                alt={`${appConfig.global.app.name} source code on GitHub`}
+                className="w-6 mr-1 transition-all hover:scale-105"
+              />
             </CoreLink>
           </div>
         </div>
