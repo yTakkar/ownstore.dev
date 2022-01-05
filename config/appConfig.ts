@@ -13,7 +13,7 @@ const appConfig = {
   },
   demo: {
     website: 'https://own-store-demo.vercel.app/',
-    api: 'https://your-store-api.herokuapp.com/',
+    api: 'https://your-store-api.herokuapp.com/documentation',
     cms: 'https://own-store-demo-cms.vercel.app/',
     doc: 'https://own-store-doc.vercel.app/',
   },
