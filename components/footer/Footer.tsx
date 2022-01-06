@@ -38,7 +38,8 @@ const Footer: React.FC<IFooterProps> = props => {
           alt="Author"
           className="w-20 rounded-full"
         />
-        <div className="mt-2 font-medium font-primary-medium text-primaryTextBold">Faiyaz (Hire me!?)</div>
+        <div className="mt-2 font-medium font-primary-medium text-primaryTextBold">Faiyaz</div>
+        <div className="">- Looking for a job change! -</div>
         <div className="mt-1">
           {links.map((link, index) => (
             <CoreLink
