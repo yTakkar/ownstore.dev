@@ -7,25 +7,3 @@
 @import 'mixins';
 @import 'fonts';
 @import 'globals';
-@import 'loader';
-
-// User forms
-.user-input {
-  @apply py-2;
-
-  &::placeholder {
-    @apply text-base;
-  }
-
-  &-error {
-    border-color: red !important;
-  }
-
-  &-group {
-    @apply mb-5;
-  }
-
-  &-label {
-    @apply text-sm text-primaryTextBold font-medium mb-2 font-normal font-primary-medium;
-  }
-}
