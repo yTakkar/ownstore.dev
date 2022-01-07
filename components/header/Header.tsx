@@ -23,19 +23,35 @@ const Header: React.FC<IHeaderProps> = props => {
               </CoreLink>
             </div>
 
-            <CoreLink
-              url={appConfig.github.org}
-              isExternal
-              className="flex font-medium font-primary-medium text-sm items-center group relative"
-              onClick={() => {
-                ga('event', 'icon-demo')
-              }}>
-              <CoreImage
-                url={SOCIAL_ICONS_SRC_MAP.GITHUB}
-                alt={`${appConfig.global.app.name} source code on GitHub`}
-                className="w-6 mr-1 transition-all hover:scale-105"
-              />
-            </CoreLink>
+            <div className="flex justify-between items-center">
+              <CoreLink
+                url={appConfig.github.org}
+                isExternal
+                className="flex font-medium font-primary-medium text-sm items-center group relative"
+                onClick={() => {
+                  ga('event', 'icon-github')
+                }}>
+                <CoreImage
+                  url={SOCIAL_ICONS_SRC_MAP.GITHUB}
+                  alt={`${appConfig.global.app.name} source code on GitHub`}
+                  className="w-6 mr-1 transition-all hover:scale-105"
+                />
+              </CoreLink>
+
+              <CoreLink
+                url={appConfig.global.twitterProfile}
+                isExternal
+                className="flex font-medium font-primary-medium text-sm items-center group relative ml-4"
+                onClick={() => {
+                  ga('event', 'icon-twitter')
+                }}>
+                <CoreImage
+                  url={SOCIAL_ICONS_SRC_MAP.TWITTER}
+                  alt={`${appConfig.global.app.name} on Twitter`}
+                  className="w-6 mr-1 transition-all hover:scale-105"
+                />
+              </CoreLink>
+            </div>
           </div>
         </div>
       </nav>

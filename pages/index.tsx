@@ -147,8 +147,8 @@ const Home: NextPage<IProps> = props => {
         <div className="text-lg ">
           <span className="text-primaryTextBold">What is {appConfig.global.app.name}?</span>{' '}
           <span>
-            An end-to-end e-commerce solution that can be configured according to your business needs. To simply put,
-            you will receive a set of configurable projects to set up your online store.
+            An end-to-end e-commerce solution that can be configured according to your business needs. To simply put, a
+            suite of configurable projects will help you set up your online store.
           </span>
         </div>
 
@@ -230,7 +230,7 @@ const Home: NextPage<IProps> = props => {
 
       <div className="mt-10 lg:mt-12">
         <div className="font-medium font-primary-medium text-xl md:text-2xl text-primaryTextBold">Need help? 👋</div>
-        <div className="mt-4">
+        <div className="mt-2">
           <div className="mb-4 md:mb-3 inline-flex items-start text-base md:text-lg">
             <span>You can also hire the author as a consultant to help set up your store.</span>
           </div>

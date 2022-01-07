@@ -10,6 +10,7 @@ const appConfig = {
     },
     domain: process.env.OWN_STORE_WEB_DOMAIN,
     baseUrl: process.env.OWN_STORE_WEB_BASE_URL,
+    twitterProfile: 'https://twitter.com/ownStore_',
   },
   demo: {
     website: 'https://own-store-demo.vercel.app/',
@@ -32,14 +33,7 @@ const appConfig = {
       username: process.env.OWN_STORE_WEB_SEO_TWITTER_USERNAME,
     },
   },
-  company: {
-    socialLinks: [
-      { type: 'TWITTER', url: 'https://twitter.com/ownStore_', name: 'Twitter', isExternal: true },
-      { type: 'FACEBOOK', url: 'https://www.facebook.com/ownStoreFB', name: 'Facebook', isExternal: true },
-      { type: 'INSTAGRAM', url: 'https://www.instagram.com/ownStore__/', name: 'Instagram', isExternal: true },
-      { type: 'MAIL', url: 'mailto:ownstoreonlinee@gmail.com', name: 'Mail', isExternal: true },
-    ],
-  },
+  company: {},
   integrations: {
     googleAnalytics: {
       enabled: process.env.OWN_STORE_WEB_INTEGRATION_GOOGLE_ANALYTICS_ENABLED === 'true',
