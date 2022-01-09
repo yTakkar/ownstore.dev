@@ -9,10 +9,15 @@ interface IFooterProps {}
 const Footer: React.FC<IFooterProps> = props => {
   const links = [
     {
-      url: 'https://twitter.com/shtakkar',
+      url: 'https://faiyaztakkar.dev',
       isExternal: true,
-      label: 'Twitter',
+      label: 'Website',
     },
+    // {
+    //   url: 'https://twitter.com/shtakkar',
+    //   isExternal: true,
+    //   label: 'Twitter',
+    // },
     {
       url: 'https://github.com/yTakkar',
       isExternal: true,
@@ -23,11 +28,11 @@ const Footer: React.FC<IFooterProps> = props => {
       isExternal: true,
       label: 'LinkedIn',
     },
-    {
-      url: 'mailto:www.shtakkar@gmail.com',
-      isExternal: true,
-      label: 'Mail',
-    },
+    // {
+    //   url: 'mailto:www.shtakkar@gmail.com',
+    //   isExternal: true,
+    //   label: 'Mail',
+    // },
   ]
 
   return (
