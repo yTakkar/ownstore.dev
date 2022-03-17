@@ -38,10 +38,10 @@ const FEATURES = [
     label: 'Highly configurable (almost everything!)',
     icon: AdjustmentsIcon,
   },
-  {
-    label: 'Save almost a year of work.',
-    icon: ClockIcon,
-  },
+  // {
+  //   label: 'Save almost a year of work.',
+  //   icon: ClockIcon,
+  // },
   {
     label: 'Easy-to-use CMS for admins.',
     icon: CubeTransparentIcon,
@@ -75,7 +75,7 @@ const FEATURES = [
     icon: CursorClickIcon,
   },
   {
-    label: 'Industry-best engineering practices from globally recognized organizations.',
+    label: 'Engineering practices from globally recognized organizations. Quality can be improved even further.',
     icon: CodeIcon,
   },
   {
@@ -83,7 +83,14 @@ const FEATURES = [
     icon: CurrencyDollarIcon,
   },
   {
-    label: 'End-to-end tested for almost a year.',
+    label: (
+      <CoreLink
+        url={'https://github.com/OwnStoreOrg/ownstore-website#readme'}
+        isExternal
+        className="border-dashed border-b border-funBlue text-funBlue">
+        Multiple in-progress action items.
+      </CoreLink>
+    ),
     icon: BadgeCheckIcon,
   },
 ]
