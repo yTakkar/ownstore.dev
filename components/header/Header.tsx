@@ -25,9 +25,22 @@ const Header: React.FC<IHeaderProps> = props => {
 
             <div className="flex justify-between items-center">
               <CoreLink
+                url={appConfig.author.portfolio}
+                className="flex font-medium font-primary-medium text-sm items-center group relative"
+                onClick={() => {
+                  ga('event', 'icon-portfolio')
+                }}>
+                <CoreImage
+                  url={'/images/icons/user.svg'}
+                  alt={`Author portfolio`}
+                  className="w-6 mr-1 transition-all hover:scale-105"
+                />
+              </CoreLink>
+
+              <CoreLink
                 url={appConfig.github.org}
                 isExternal
-                className="flex font-medium font-primary-medium text-sm items-center group relative"
+                className="flex font-medium font-primary-medium text-sm items-center group relative ml-4"
                 onClick={() => {
                   ga('event', 'icon-github')
                 }}>

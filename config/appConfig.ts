@@ -25,6 +25,9 @@ const appConfig = {
     cms: 'https://github.com/OwnStoreOrg/ownstore-cms',
     doc: 'https://github.com/OwnStoreOrg/ownstore-doc',
   },
+  author: {
+    portfolio: 'https://faiyaztakkar.dev',
+  },
   seo: {
     facebook: {
       pageId: process.env.OWN_STORE_WEB_SEO_FACEBOOK_PAGE_ID,
