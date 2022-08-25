@@ -39,7 +39,6 @@ const Header: React.FC<IHeaderProps> = props => {
 
               <CoreLink
                 url={appConfig.github.org}
-                isExternal
                 className="flex font-medium font-primary-medium text-sm items-center group relative ml-4"
                 onClick={() => {
                   ga('event', 'icon-github')
@@ -53,7 +52,6 @@ const Header: React.FC<IHeaderProps> = props => {
 
               <CoreLink
                 url={appConfig.global.twitterProfile}
-                isExternal
                 className="flex font-medium font-primary-medium text-sm items-center group relative ml-4"
                 onClick={() => {
                   ga('event', 'icon-twitter')
