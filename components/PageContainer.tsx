@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 
-const PageContainer: React.FC = props => {
+interface IProps extends PropsWithChildren {}
+
+const PageContainer: React.FC<IProps> = props => {
   return <div className="container mx-auto min-h-[68vh]">{props.children}</div>
 }
 

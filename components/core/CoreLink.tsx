@@ -2,7 +2,7 @@ import React, { ReactNode, CSSProperties } from 'react'
 import NextLink from 'next/link'
 
 export interface ICoreLinkProps {
-  url: string
+  url: string | null
   className?: string
   isExternal?: boolean
   style?: CSSProperties

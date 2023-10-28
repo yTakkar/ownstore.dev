@@ -38,7 +38,7 @@ const Footer: React.FC<IFooterProps> = props => {
       <div className="flex flex-col items-center py-24">
         <CoreImage url={'/images/author.jpeg'} alt="Faiyaz" className="w-20 rounded-full" />
         <div className="mt-2 font-bold text-primaryTextBold">Faiyaz</div>
-        <div className="">- Let's connect! -</div>
+        <div className="">{`- Let's connect! -`}</div>
         <div className="mt-1">
           {links.map((link, index) => (
             <CoreLink

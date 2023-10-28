@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { useRouter } from 'next/router'
 import CoreLink, { ICoreLinkProps } from './CoreLink'
 
+// @ts-ignore
 interface ICoreActiveLinkProps extends ICoreLinkProps {
   pagePaths?: string[]
   activeClassName?: string
+  children: ReactNode | ((active: boolean) => ReactNode)
 }
 
 /*
