@@ -1,6 +1,7 @@
 // this map can have logos of multiple sizes
 export const APP_LOGO = {
   DEFAULT: `/images/logos/logo-transparent.png`,
+  DEFAULT_WHITE: `/images/logos/logo-white.png`,
 }
 
 export const SOCIAL_ICONS_SRC_MAP = {
