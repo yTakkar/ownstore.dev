@@ -189,26 +189,26 @@ const Home: NextPage<IProps> = props => {
       </div>
 
       <div className="mt-10 lg:mt-12">
-        <div className="font-medium font-primary-medium text-xl md:text-2xl text-primaryTextBold">
-          Projects included in this suite 🧳
-        </div>
+        <div className="font-bold text-xl md:text-2xl text-primaryTextBold">Projects included in this suite 🧳</div>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2">
           {PROJECTS.map((project, index) => {
             return (
               <div key={index} className="border border-periwinkleGray rounded p-4 transition-all relative">
-                <div className="text-primaryTextBold font-primary-medium font-medium">{project.label}</div>
+                <div className="text-primaryTextBold font-semibold">{project.label}</div>
                 <div>{project.description}</div>
 
-                <div className="absolute top-2 right-2 flex items-center">
-                  <CoreLink url={project.githubUrl}>
-                    <CoreImage
-                      url={SOCIAL_ICONS_SRC_MAP.GITHUB}
-                      alt={`${project.label} source code on GitHub`}
-                      className="w-4 h-4 mr-2 cursor-pointer"
-                    />
+                <div className="flex items-center mt-2">
+                  <CoreLink
+                    url={project.demoUrl}
+                    isExternal
+                    className="text-sm mr-2 border-dashed border-b border-funBlue text-funBlue">
+                    Demo
                   </CoreLink>
-                  <CoreLink url={project.demoUrl} isExternal>
-                    <ExternalLinkIcon className="w-4 h-4 cursor-pointer" />
+                  <CoreLink
+                    url={project.githubUrl}
+                    isExternal
+                    className="text-sm border-dashed border-b border-funBlue text-funBlue">
+                    GitHub
                   </CoreLink>
                 </div>
               </div>
@@ -218,9 +218,7 @@ const Home: NextPage<IProps> = props => {
       </div>
 
       <div className="mt-10 lg:mt-12">
-        <div className="font-medium font-primary-medium text-xl md:text-2xl text-primaryTextBold">
-          Few top-level benefits 🚀
-        </div>
+        <div className="font-bold text-xl md:text-2xl text-primaryTextBold">Few top-level benefits 🚀</div>
         <div className="mt-4 grid">
           {FEATURES.map((feature, index) => {
             const Icon = feature.icon || StarIcon
@@ -236,7 +234,7 @@ const Home: NextPage<IProps> = props => {
       </div>
 
       <div className="mt-10 lg:mt-12">
-        <div className="font-medium font-primary-medium text-xl md:text-2xl text-primaryTextBold">Need help? 👋</div>
+        <div className="font-bold text-xl md:text-2xl text-primaryTextBold">Need help? 👋</div>
         <div className="mt-2">
           <div className="mb-4 md:mb-3 inline-flex items-start text-base md:text-lg">
             <span>You can also hire the author as a consultant to help set up your store.</span>

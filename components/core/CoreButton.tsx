@@ -56,7 +56,7 @@ const CoreButton: React.FC<ICoreButtonProps> = props => {
     <button
       disabled={isDisabled}
       className={classnames(
-        'rounded-md font-medium font-primary-medium focus:outline-none focus:ring-2 transition duration-500 ease-in-out coreLink select-none',
+        'rounded-md font-semibold focus:outline-none focus:ring-2 transition duration-500 ease-in-out coreLink select-none',
         {
           'cursor-auto': isDisabled,
 

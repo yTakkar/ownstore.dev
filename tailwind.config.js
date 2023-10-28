@@ -278,9 +278,11 @@ const tailwindConfig = {
       DEFAULT: '1',
     },
     fontFamily: {
-      primary: ['"BentonSans"', 'Arial', 'Noto Sans', 'sans-serif'],
-      'primary-bold': ['"BentonSans-Bold"', 'Arial', 'Noto Sans', 'sans-serif'],
-      'primary-medium': ['"BentonSans-Medium"', 'Arial', 'Noto Sans', 'sans-serif'],
+      // primary: ['"BentonSans"', 'Arial', 'Noto Sans', 'sans-serif'],
+      // 'primary-bold': ['"BentonSans-Bold"', 'Arial', 'Noto Sans', 'sans-serif'],
+      // 'primary-medium': ['"BentonSans-Medium"', 'Arial', 'Noto Sans', 'sans-serif'],
+
+      primary: ['"Nunito"', 'Helvetica'],
     },
     fontSize: {
       xxs: ['0.625rem', { lineHeight: '1rem' }],

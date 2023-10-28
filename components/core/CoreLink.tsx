@@ -1,6 +1,5 @@
 import React, { ReactNode, CSSProperties } from 'react'
 import NextLink from 'next/link'
-import appConfig from '../../config/appConfig'
 
 export interface ICoreLinkProps {
   url: string
@@ -35,17 +34,16 @@ const CoreLink: React.FC<ICoreLinkProps> = props => {
   }
 
   return (
-    <NextLink href={url}>
-      <a
-        data-hover={typeof children === 'string' ? children : ''}
-        className={className}
-        target={isExternal ? '_blank' : '_self'}
-        rel={isExternal ? 'noopener noreferrer' : ''}
-        style={style}
-        title={title}
-        onClick={handleClick}>
-        {children}
-      </a>
+    <NextLink
+      href={url}
+      className={className}
+      target={isExternal ? '_blank' : '_self'}
+      rel={isExternal ? 'noopener noreferrer' : ''}
+      style={style}
+      title={title}
+      onClick={handleClick}
+      data-hover={typeof children === 'string' ? children : ''}>
+      {children}
     </NextLink>
   )
 }
