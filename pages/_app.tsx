@@ -7,7 +7,7 @@ import classNames from 'classnames'
 import AppSeo, { IAppSeoProps } from '../components/seo/AppSeo'
 import Header from '../components/header/Header'
 import Footer from '../components/footer/Footer'
-
+import toast, { Toaster } from 'react-hot-toast'
 declare let window: any
 
 export interface IPageLayoutData {}
@@ -29,6 +29,13 @@ const MyApp: NextPage<IProps> = props => {
 
   const router = useRouter()
 
+  useEffect(() => {
+    toast('The suite is under maintenance.', {
+      icon: '🛠️',
+      duration: 5000,
+    })
+  }, [])
+
   return (
     <div>
       <AppSeo {...seo} />
@@ -40,6 +47,19 @@ const MyApp: NextPage<IProps> = props => {
           <Component {...pageProps} key={router.route} />
         </PageContainer>
       </main>
+
+      <Toaster
+        position={'bottom-center'}
+        toastOptions={{
+          style: {
+            borderRadius: '8px',
+            background: '#333',
+            color: '#fff',
+            padding: '16px 16px',
+            maxWidth: 'none',
+          },
+        }}
+      />
 
       <Footer />
     </div>
